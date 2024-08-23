@@ -7,7 +7,7 @@
 		<ul>
 			<li v-for="(task, index) in tasks" :key="index">
 				<input type="checkbox" v-model="task.completed" />
-				<span :class="{ 'completed: task.completed }">{{ task.text }}</span>
+				<span :class="{ 'completed': task.completed }">{{ task.text }}</span>
 				<button @click="removeTask(index)">Remove</button>
 			</li>
 		</ul>
