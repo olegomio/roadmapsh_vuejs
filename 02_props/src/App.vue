@@ -1,19 +1,25 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref } from 'vue';
+import TodoList from './components/TodoList.vue'
+
+const items = ref([
+{ key: 1, title: 'todo 1' },
+{ key: 2, title: 'todo 2' },
+{ key: 3, title: 'todo 3' },
+{ key: 4, title: 'todo 4' },
+{ key: 5, title: 'todo 5' }
+])
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <h1>Prop Excercise!</h1>
     </div>
   </header>
 
   <main>
-    <TheWelcome />
+    <TodoList :items="items" />
   </main>
 </template>
 

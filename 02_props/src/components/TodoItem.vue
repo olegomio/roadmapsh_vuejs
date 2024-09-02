@@ -1,10 +1,13 @@
 <script setup>
-defineProps(['item'])
+defineProps({
+  key: Number,
+  title: String
+})
 </script>
 
 <template>
-  <li>
+  <li :id="key">
     <input type="checkbox">
-    {{ item }}
+    {{ title }}
   </li> 
 </template>
