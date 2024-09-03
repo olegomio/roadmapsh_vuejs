@@ -2,6 +2,11 @@
 
 import UserForm from './UserForm.vue'
 
+const props = defineProps({
+  nameChange: String,
+  ageChange: Number
+});
+
 </script>
 
 <template>
@@ -9,11 +14,11 @@ import UserForm from './UserForm.vue'
   <h1>Display</h1>
   <div>
     <span>Name</span><br />
-    <span>{{ upName }}</span>
+    <span>{{ nameChange }}</span>
   </div>
   <div>
     <span>Alter</span><br />
-    <span>{{ upAge }}</span>
+    <span>{{ ageChange }}</span>
   </div>
 
 </template>
