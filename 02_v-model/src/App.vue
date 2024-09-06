@@ -3,8 +3,8 @@ import UserDisplay from './components/UserDisplay.vue'
 import UserForm from './components/UserForm.vue'
 import { ref } from 'vue'
 
-let UserName = "Mustermann"
-let UserAge = 18
+const name = ref('Max Mustermann')
+const age = ref(18)
 
 </script>
 
@@ -12,8 +12,8 @@ let UserAge = 18
 
   <h1>V-Model Excercise</h1>
 
-  <UserDisplay :nameChange='UserName' :ageChange='UserAge' />
-  <UserForm @userNameChange="UserName = $event" @userAgeChange="UserAge = $event" />
+  <UserDisplay :name="name" :age="age" />
+<UserForm v-model:name="name" v-model:age="age" />
 
 </template>
 
